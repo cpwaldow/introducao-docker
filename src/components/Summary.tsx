@@ -9,7 +9,7 @@ const Summary = () => {
           <Link to='/introduction'>Introdução</Link>
         </li>
         <ul>
-          <li>O que são Containers?</li>
+          <li>Docker e Containers</li>
           <li>Por que precisamos de Containers?</li>
           <li>Bare Metal vs Máquina Virtual vs Containers</li>
           <li>Docker e OCI</li>

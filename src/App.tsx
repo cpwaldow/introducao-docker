@@ -1,13 +1,14 @@
 import './App.css';
 import { Route, Routes } from 'react-router-dom';
 import Home from './pages/Home';
+import Introduction from './pages/Introduction';
 
 function App() {
   return (
     <>
       <Routes>
         <Route path='/' element={<Home />} />
-        <Route path='/introduction' element={<h1>Introdução</h1>} />
+        <Route path='/introduction' element={<Introduction />} />
         <Route path='/technologies' element={<h1>Tecnologias</h1>} />
         <Route path='/installation' element={<h1>Instalação / Setup</h1>} />
         <Route path='/basics-of-docker' element={<h1>Básico do Docker</h1>} />
