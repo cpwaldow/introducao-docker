@@ -1,11 +1,15 @@
 import FlexContainer from '../components/FlexContainer';
 import Summary from '../components/Summary';
 import Title from '../components/Title';
+import dockerIcon from '/docker.svg';
 
 const Home = () => {
   return (
     <>
-      <Title title='Introdução ao Docker' />
+      <FlexContainer>
+        <img src={dockerIcon} alt='Docker icon' className='home--icon' />
+        <Title title='Introdução ao Docker' />
+      </FlexContainer>
       <FlexContainer>
         <p>
           Aprender Docker não é apenas uma habilidade valiosa para
