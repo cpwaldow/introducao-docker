@@ -1,3 +1,15 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 .home--icon {
     width: 100px;
+}
+
+.background-blue {
+    background-color: var(--main-blue);
+    color: white;
+    padding: 1rem;
 }
