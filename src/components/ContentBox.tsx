@@ -10,6 +10,18 @@ const Content = styled.section<ContentBoxType>`
   width: var(--margin-content);
   margin: 0 auto;
   color: ${(props) => props.color};
+
+  > h3 {
+    margin-bottom: 1rem;
+  }
+
+  > p {
+    margin-bottom: 1rem;
+  }
+
+  > ul > li {
+    margin-bottom: 1rem;
+  }
 `;
 
 const Subtitle = styled.h2`
