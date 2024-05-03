@@ -11,7 +11,7 @@ const Summary = () => {
         <ul>
           <li>Docker e Containers</li>
           <li>Por que precisamos de Containers?</li>
-          <li>Bare Metal vs Máquina Virtual vs Containers</li>
+          <li>Computador Físico vs Máquina Virtual vs Containers</li>
           <li>Docker e OCI</li>
         </ul>
         <li>

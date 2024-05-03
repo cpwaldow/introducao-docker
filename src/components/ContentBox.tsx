@@ -1,21 +1,34 @@
 import styled from 'styled-components';
+import { ContentBoxType } from '../types';
 
-const ContainerContent = styled.p`
+const Container = styled.section<ContentBoxType>`
+  background-color: ${(props) => props.background};
+  padding: 2rem;
+`;
+
+const Content = styled.section<ContentBoxType>`
   width: var(--margin-content);
   margin: 0 auto;
+  color: ${(props) => props.color};
+`;
+
+const Subtitle = styled.h2`
+  text-align: center;
+  margin-bottom: 2rem;
+  color: ${(props) => props.color};
 `;
 
 const ContentBox = ({
   background,
+  color,
   children,
-}: {
-  children: any;
-  background?: string;
-}) => {
+  subtitle,
+}: ContentBoxType) => {
   return (
-    <section className={`${background}`}>
-      <ContainerContent>{children}</ContainerContent>
-    </section>
+    <Container background={background}>
+      {subtitle && <Subtitle color={color}>{subtitle}</Subtitle>}
+      <Content color={color}>{children}</Content>
+    </Container>
   );
 };
 
