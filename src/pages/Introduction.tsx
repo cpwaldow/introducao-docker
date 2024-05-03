@@ -3,6 +3,7 @@ import ContentBox from '../components/ContentBox';
 import Title from '../components/Title';
 
 const Introduction = () => {
+  const blue = 'var(--main-blue)';
   return (
     <>
       <header>
@@ -10,7 +11,7 @@ const Introduction = () => {
       </header>
       <main>
         <Title title='Docker e Containers' />
-        <ContentBox background='var(--main-blue)' color='white'>
+        <ContentBox background={blue} color='white'>
           <p>
             Docker é uma plataforma que simplifica o processo de criar,
             implantar, e gerenciar containers. Isso garante a desenvolvedores e
@@ -20,8 +21,7 @@ const Introduction = () => {
             container, que podem ser distribuídos e rodar consistentemente em
             qualquer ambiente que suporta Docker.
           </p>
-        </ContentBox>
-        <ContentBox background='var(--main-blue)' color='white'>
+
           <p>
             Docker é uma plataforma que simplifica o processo de criar,
             implantar, e gerenciar containers. Isso garante a desenvolvedores e
@@ -140,6 +140,97 @@ const Introduction = () => {
             organização para responder as rápidas mudanças do mercado, tendo uma
             melhora mais eficiente sobre os recursos, e garantindo a entrega de
             softwares mais confiáveis e consistentes.
+          </p>
+        </ContentBox>
+        <ContentBox
+          background={blue}
+          subtitle='Máquina Física vs Máquina Virtual vs Containers'
+          color='white'
+        >
+          <p>
+            Abordaremos de forma rápida sobre as diferenças entre máquina
+            física, máquina virtual e containers.
+          </p>
+          <h3>Máquina Física</h3>
+          <p>
+            Máquina física é um termo utilizado para descrever um computador que
+            roda diretamente em seu hardware sem qualquer virtualização. É a
+            forma mais performática de rodar uma aplicação, mas é uma forma que
+            existe pouca flexibilidade. Você pode rodar apenas uma aplicação por
+            servidor, e não pode mudar a aplicação para outro servidor de uma
+            forma simples.
+          </p>
+          <h3>Máquinas Virtual</h3>
+          <p>
+            Máquinas virtuais (VMs) são uma forma de rodar múltiplas aplicações
+            em um único servidor. Cada máquina virtual roda no topo do
+            hiperservidor, cada pedaço do software que emula o hardware do
+            computador. O hiperservidor te permite rodar múltiplos sistemas
+            operacionais em um único servidor, e isso permite isolamento entre
+            aplicações rodando em diferentes VMs.
+          </p>
+          <h3>Containers</h3>
+          <p>
+            Containers são uma forma de rodar múltiplas aplicações em um único
+            servidor sem a sobrecarga de um hiperservidor. Cada container roda
+            no topo do motos do container. O motor do container te permite rodar
+            múltiplas aplicações em um único servidor, e também permite
+            isolamento entre as aplicações rodando em diferentes containers.
+          </p>
+        </ContentBox>
+        <ContentBox subtitle='Docker e OCI'>
+          <p>
+            <a href='https://opencontainers.org/'>
+              Iniciativa de Containers Abertos
+            </a>{' '}
+            ou <i>Open Container Initiative (OCI)</i>, é um Projeto da Fundação
+            Linux que mira a criar padrões de mercado para formato de containers
+            e tempos de execução. Seu objetivo principal é garantir a
+            compatibilidade e interoperabilidade dos containers entre ambientes
+            através de especificações técnicas definidas.
+          </p>
+          <h3>Papel do Docker na OCI</h3>
+          <p>
+            Docker é um dos membros fundadores da OCI, e desempenhou um papel
+            fundamental na definição dos padrões para formatos de containers e
+            tempos de execução. Inicialmente, Docker desenvolveu que tempos de
+            execução de containers (Docker Engine) e formato de imagem (Docker
+            Image) que serve como base para as especificações da OCI.
+          </p>
+          <h3>Especificações OCI</h3>
+          <p>OCI tem duas especificaçÕes principais:</p>
+          <ul>
+            <li>
+              <b>Especificação de Tempo de Execução (runtime-spec):</b> Isso
+              define as especificações para executar um container com uma
+              tecnologia isolada, similar a um motor de container. O tempo de
+              execução do container construindo pelo Docker, chamado
+              "conteinerização", tem guiado o desenvolvimento do runtime-spec
+              OCI.
+            </li>
+            <li>
+              <b>Especificação de imagem (image-spec):</b> Isso define a o
+              formato da imagem do container, que descreve os conteúdos do
+              container e podem ser rodados pelo tempo de execução compatível
+            </li>
+          </ul>
+          <h3>Compatibilidade entre Docker e OCI</h3>
+          <p>
+            Docker continua comprometido a dar suporte às especificações do OCI
+            e, desde o envolvimento na OCI, tem seu software continuamente
+            atualizadas para ser compilado com os padrões OCI. Tempo de execução
+            e formato da imagem nos containers Docker são completamente
+            compatíveis com as especificações OCI, permitindo containers Docker
+            serem rodados por tempo de execução de outros compiladores de
+            containers OCI e vice e versa.
+          </p>
+          <p>
+            Em resumo, Docker e OCI trabalham juntos para manter a qualidade e
+            compatibilidade com os padrões do mercado. Docker tem mantido um
+            papel importante no desenvolvimento das especificações da OCI,
+            garantindo que o ecossistema permanece saudável, operante, e
+            acessível para uma ampla variedade de usuários e plataformas no
+            mercado.
           </p>
         </ContentBox>
       </main>
