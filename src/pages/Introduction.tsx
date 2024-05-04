@@ -6,8 +6,8 @@ import {
   List,
   SubtitleLevel3,
   LinkRoute,
+  Title,
 } from '../style/style';
-import Title from '../components/Title';
 import Header from '../components/Header';
 
 const Introduction = () => {
@@ -15,7 +15,7 @@ const Introduction = () => {
     <>
       <Header />
       <main>
-        <Title title='Docker e Containers' />
+        <Title>Docker e Containers</Title>
         <Container background='main-blue'>
           <ContentContainer>
             <Content color='white'>

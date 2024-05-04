@@ -1,11 +1,11 @@
 import Summary from '../components/Summary';
-import Title from '../components/Title';
 import dockerIcon from '/docker.svg';
 import {
   Container,
   Content,
   ContentContainer,
   FlexContainer,
+  Title,
 } from '../style/style';
 
 const Home = () => {
@@ -13,7 +13,7 @@ const Home = () => {
     <>
       <FlexContainer>
         <img src={dockerIcon} alt='Docker icon' className='home--icon' />
-        <Title title='Introdução ao Docker' />
+        <Title>Introdução ao Docker</Title>
       </FlexContainer>
 
       <Container>
