@@ -3,7 +3,8 @@ import { ContentBoxType, LinkRouteType } from '../types';
 import { Link } from 'react-router-dom';
 
 export const Container = styled.section<ContentBoxType>`
-  background-color: ${(props) => props.background};
+  background-color: ${(props) =>
+    props.background === 'main-blue' ? '#066da5' : props.background};
   padding: 2rem;
 `;
 

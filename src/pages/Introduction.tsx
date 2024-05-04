@@ -10,7 +10,6 @@ import {
 import Title from '../components/Title';
 
 const Introduction = () => {
-  const blue = 'var(--main-blue)';
   return (
     <>
       <header>
@@ -20,7 +19,7 @@ const Introduction = () => {
       </header>
       <main>
         <Title title='Docker e Containers' />
-        <Container background={blue}>
+        <Container background='main-blue'>
           <ContentContainer>
             <Content color='white'>
               Docker é uma plataforma que simplifica o processo de criar,
@@ -48,7 +47,7 @@ const Introduction = () => {
           </ContentContainer>
         </Container>
 
-        <Container background={blue}>
+        <Container background='main-blue'>
           <ContentContainer>
             <Subtitle color='white'>Como containers funcionam?</Subtitle>
             <Content color='white'>
@@ -151,7 +150,7 @@ const Introduction = () => {
           </ContentContainer>
         </Container>
 
-        <Container background={blue}>
+        <Container background='main-blue'>
           <Subtitle color='white'>
             Máquina Física vs Máquina Virtual vs Containers
           </Subtitle>
