@@ -1,12 +1,12 @@
-import { Link } from 'react-router-dom';
+import { Subtitle, LinkRoute } from '../style/style';
 
 const Summary = () => {
   return (
     <>
-      <h2>Sumário</h2>
+      <Subtitle>Sumário</Subtitle>
       <ul>
         <li>
-          <Link to='/introduction'>Introdução</Link>
+          <LinkRoute to='/introduction'>Introdução</LinkRoute>
         </li>
         <ul>
           <li>Docker e Containers</li>
@@ -15,7 +15,7 @@ const Summary = () => {
           <li>Docker e OCI</li>
         </ul>
         <li>
-          <Link to='/technologies'>Tecnologias</Link>
+          <LinkRoute to='/technologies'>Tecnologias</LinkRoute>
         </li>
         <ul>
           <li>Namespaces</li>
@@ -23,17 +23,17 @@ const Summary = () => {
           <li>Sistemas de arquivos de união</li>
         </ul>
         <li>
-          <Link to='/installation'>Instalação / Setup</Link>
+          <LinkRoute to='/installation'>Instalação / Setup</LinkRoute>
         </li>
         <ul>
           <li>Docker Desktop (Windows / Mac / Linux)</li>
           <li>Docker Engine (Linux)</li>
         </ul>
         <li>
-          <Link to='/basics-of-docker'>Básico do Docker</Link>
+          <LinkRoute to='/basics-of-docker'>Básico do Docker</LinkRoute>
         </li>
         <li>
-          <Link to='/data-persistence'>Persistência de Dados</Link>
+          <LinkRoute to='/data-persistence'>Persistência de Dados</LinkRoute>
         </li>
         <ul>
           <li>Sistema de arquivos de Contêiner Efêmero</li>
@@ -41,7 +41,9 @@ const Summary = () => {
           <li>Montar Vínculos</li>
         </ul>
         <li>
-          <Link to='/third-party-images'>Utilizando Imagens de Terceiros</Link>
+          <LinkRoute to='/third-party-images'>
+            Utilizando Imagens de Terceiros
+          </LinkRoute>
         </li>
         <ul>
           <li>Banco de Dados</li>
@@ -49,9 +51,9 @@ const Summary = () => {
           <li>Utilitários de Linha de Comando</li>
         </ul>
         <li>
-          <Link to='/building-container-images'>
+          <LinkRoute to='/building-container-images'>
             Construir Container Imagens
-          </Link>
+          </LinkRoute>
         </li>
         <ul>
           <li>Dockerfile</li>
@@ -59,7 +61,9 @@ const Summary = () => {
           <li>Tamanho de Imagem e Segurança</li>
         </ul>
         <li>
-          <Link to='/container-registries'>Registros de Container</Link>
+          <LinkRoute to='/container-registries'>
+            Registros de Container
+          </LinkRoute>
         </li>
         <ul>
           <li>Melhores Práticas de Versionar Imagens</li>
@@ -67,7 +71,7 @@ const Summary = () => {
           <li>Dockerhub</li>
         </ul>
         <li>
-          <Link to='/running-containers'>Rodando Containers</Link>
+          <LinkRoute to='/running-containers'>Rodando Containers</LinkRoute>
         </li>
         <ul>
           <li>docker run</li>
@@ -75,14 +79,14 @@ const Summary = () => {
           <li>Configurando Opções de Runtime</li>
         </ul>
         <li>
-          <Link to='/container-security'>Segurança de Container</Link>
+          <LinkRoute to='/container-security'>Segurança de Container</LinkRoute>
         </li>
         <ul>
           <li>Segurança de Imagem</li>
           <li>Segurança de Runtime</li>
         </ul>
         <li>
-          <Link to='/docker-cli'>Docker CLI</Link>
+          <LinkRoute to='/docker-cli'>Docker CLI</LinkRoute>
         </li>
         <ul>
           <li>Containers</li>
@@ -91,9 +95,9 @@ const Summary = () => {
           <li>Networks</li>
         </ul>
         <li>
-          <Link to='/developer-experience'>
+          <LinkRoute to='/developer-experience'>
             Experiência de Desenvolvedor(a)
-          </Link>
+          </LinkRoute>
         </li>
         <ul>
           <li>Hot Reloading</li>
@@ -102,7 +106,7 @@ const Summary = () => {
           <li>Integração Contínua</li>
         </ul>
         <li>
-          <Link to='/deploying-containers'>Deploy Containers</Link>
+          <LinkRoute to='/deploying-containers'>Deploy Containers</LinkRoute>
         </li>
         <ul>
           <li>Opções PaaS</li>

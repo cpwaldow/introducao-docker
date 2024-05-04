@@ -8,5 +8,6 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   --margin-content: 75%;
-  --main-blue: #066da5
+  --main-blue: #066da5;
+  --main-dark-blue: #053e5c;
 }

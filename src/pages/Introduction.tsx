@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 import {
   Container,
   Content,
@@ -6,6 +5,7 @@ import {
   Subtitle,
   List,
   SubtitleLevel3,
+  LinkRoute,
 } from '../style/style';
 import Title from '../components/Title';
 
@@ -14,7 +14,9 @@ const Introduction = () => {
   return (
     <>
       <header>
-        <Link to='/'>Home</Link>
+        <LinkRoute to='/' padding='1rem'>
+          Home
+        </LinkRoute>
       </header>
       <main>
         <Title title='Docker e Containers' />
@@ -247,7 +249,14 @@ const Introduction = () => {
         </Container>
       </main>
       <footer>
-        <Link to='/technologies'>Próximo</Link>
+        <LinkRoute
+          to='/technologies'
+          display='block'
+          textalign='end'
+          padding='1rem'
+        >
+          Próximo
+        </LinkRoute>
       </footer>
     </>
   );

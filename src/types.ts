@@ -1,6 +1,11 @@
 export type ContentBoxType = {
-  children: React.ReactNode;
   background?: string;
   color?: string;
   subtitle?: string;
+};
+
+export type LinkRouteType = {
+  display?: string;
+  textalign?: string;
+  padding?: string;
 };
