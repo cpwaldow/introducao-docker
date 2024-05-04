@@ -62,3 +62,8 @@ export const HeaderContainer = styled.header`
   text-align: center;
   padding: 1rem;
 `;
+
+export const Title = styled.h1`
+  text-align: center;
+  margin: 3rem 0;
+`;
