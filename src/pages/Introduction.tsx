@@ -7,6 +7,7 @@ import {
   SubtitleLevel3,
   LinkRoute,
   Title,
+  FlexContainer,
 } from '../style/style';
 import Header from '../components/Header';
 
@@ -169,17 +170,23 @@ const Introduction = () => {
             <Content color='white'>
               Máquinas virtuais (VMs) são uma forma de rodar múltiplas
               aplicações em um único servidor. Cada máquina virtual roda no topo
-              do hiperservidor, cada pedaço do software que emula o hardware do
-              computador. O hiperservidor te permite rodar múltiplos sistemas
+              do hipervisor, cada pedaço do software que emula o hardware do
+              computador. O hipervisor te permite rodar múltiplos sistemas
               operacionais em um único servidor, e isso permite isolamento entre
               aplicações rodando em diferentes VMs.
+            </Content>
+            <Content color='white'>
+              <i>
+                Um hipervisor é um software que você pode usar para executar
+                várias máquinas virtuais em uma única máquina física.
+              </i>
             </Content>
             <SubtitleLevel3 color='white'>Containers</SubtitleLevel3>
             <Content color='white'>
               Containers são uma forma de rodar múltiplas aplicações em um único
-              servidor sem a sobrecarga de um hiperservidor. Cada container roda
-              no topo do motos do container. O motor do container te permite
-              rodar múltiplas aplicações em um único servidor, e também permite
+              servidor sem a sobrecarga de um hipervisor. Cada container roda no
+              topo do motos do container. O motor do container te permite rodar
+              múltiplas aplicações em um único servidor, e também permite
               isolamento entre as aplicações rodando em diferentes containers.
             </Content>
           </ContentContainer>
@@ -245,14 +252,17 @@ const Introduction = () => {
         </Container>
       </main>
       <footer>
-        <LinkRoute
-          to='/technologies'
-          display='block'
-          textalign='end'
-          padding='1rem'
-        >
-          Próximo
-        </LinkRoute>
+        <FlexContainer>
+          <LinkRoute
+            to='/technologies'
+            display='block'
+            textalign='end'
+            padding='1rem'
+            next=' >>'
+          >
+            Próximo
+          </LinkRoute>
+        </FlexContainer>
       </footer>
     </>
   );
