@@ -8,15 +8,12 @@ import {
   LinkRoute,
 } from '../style/style';
 import Title from '../components/Title';
+import Header from '../components/Header';
 
 const Introduction = () => {
   return (
     <>
-      <header>
-        <LinkRoute to='/' padding='1rem'>
-          Home
-        </LinkRoute>
-      </header>
+      <Header />
       <main>
         <Title title='Docker e Containers' />
         <Container background='main-blue'>

@@ -47,7 +47,7 @@ export const FlexContainer = styled.section`
 export const LinkRoute = styled(Link)<LinkRouteType>`
   display: ${(props) => props.display};
   text-align: ${(props) => props.textalign};
-  color: var(--main-blue);
+  color: ${(props) => (props.color ? props.color : '#066da5')};
   text-decoration: underline;
   cursor: pointer;
   padding: ${(props) => props.padding};
@@ -55,4 +55,10 @@ export const LinkRoute = styled(Link)<LinkRouteType>`
   &:hover {
     color: var(--main-dark-blue);
   }
+`;
+
+export const HeaderContainer = styled.header`
+  background-color: #066da5;
+  text-align: center;
+  padding: 1rem;
 `;
