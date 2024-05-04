@@ -9,4 +9,6 @@ export type LinkRouteType = {
   textalign?: string;
   padding?: string;
   color?: string;
+  next?: string;
+  prev?: string;
 };

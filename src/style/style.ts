@@ -55,6 +55,12 @@ export const LinkRoute = styled(Link)<LinkRouteType>`
   &:hover {
     color: var(--main-dark-blue);
   }
+  &::after {
+    content: ${(props) => JSON.stringify(props.next)};
+  }
+  &::before {
+    content: ${(props) => JSON.stringify(props.prev)};
+  }
 `;
 
 export const HeaderContainer = styled.header`
