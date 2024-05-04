@@ -2,6 +2,7 @@ import './App.css';
 import { Route, Routes } from 'react-router-dom';
 import Home from './pages/Home';
 import Introduction from './pages/Introduction';
+import Technologies from './pages/Technologies';
 
 function App() {
   return (
@@ -9,7 +10,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/introduction' element={<Introduction />} />
-        <Route path='/technologies' element={<h1>Tecnologias</h1>} />
+        <Route path='/technologies' element={<Technologies />} />
         <Route path='/installation' element={<h1>Instalação / Setup</h1>} />
         <Route path='/basics-of-docker' element={<h1>Básico do Docker</h1>} />
         <Route
