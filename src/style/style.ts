@@ -73,3 +73,8 @@ export const Title = styled.h1`
   text-align: center;
   margin: 3rem 0;
 `;
+
+export const WorkingImg = styled.img`
+  width: 50vw;
+  border-radius: 10px;
+`;
