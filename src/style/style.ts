@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import { AnchorType, ContentBoxType, LinkRouteType } from '../types';
 import { Link } from 'react-router-dom';
 
@@ -75,8 +75,19 @@ export const Title = styled.h1`
 `;
 
 export const WorkingImg = styled.img`
-  width: 50vw;
+  width: 30vw;
   border-radius: 10px;
+`;
+
+const rotate = keyframes`
+  to {
+    transform: rotate(359deg);
+  }
+`;
+
+export const InfiniteRotate = styled.div`
+  animation: ${rotate} 5s linear infinite;
+  margin: 6rem;
 `;
 
 export const Anchor = styled.a<AnchorType>`

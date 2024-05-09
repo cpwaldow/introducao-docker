@@ -5,6 +5,7 @@ import {
   Title,
   Content,
   ContentContainer,
+  InfiniteRotate,
 } from '../style/style';
 
 const Working = () => {
@@ -24,7 +25,9 @@ const Working = () => {
             <Content>Obrigado por nunca mais não voltar 😁</Content>
           </ContentContainer>
         </div>
-        <WorkingImg src={img} alt='Estamos trabalhando' />
+        <InfiniteRotate>
+          <WorkingImg src={img} alt='Estamos trabalhando' />
+        </InfiniteRotate>
       </FlexContainer>
     </>
   );
