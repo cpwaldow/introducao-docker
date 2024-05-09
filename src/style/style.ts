@@ -94,3 +94,9 @@ export const Anchor = styled.a<AnchorType>`
   color: ${(props) => props.color};
   font-weight: ${(props) => props.fontweight};
 `;
+
+export const Small = styled.small`
+  color: ${(prop) => prop.color};
+  text-align: center;
+  display: block;
+`;

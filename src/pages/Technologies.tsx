@@ -9,6 +9,8 @@ import {
   Content,
   SubtitleLevel3,
   List,
+  Anchor,
+  Small,
 } from '../style/style';
 
 const Technologies = () => {
@@ -217,6 +219,123 @@ const Technologies = () => {
               que os containers têm os recursos necessários e mantendo um bom
               desempenho geral do sistema.
             </Content>
+          </ContentContainer>
+        </Container>
+        <Container>
+          <Small>Apenas para ter uma ideia básica</Small>
+          <Subtitle>Union Filesystems</Subtitle>
+          <ContentContainer>
+            <Content>
+              Os sistemas de arquivos Union, também conhecidos como UnionFS,
+              desempenham um papel crucial no funcionamento geral do Docker. É
+              um tipo único de sistema de arquivos que cria uma estrutura de
+              arquivos virtual e em camadas, sobrepondo vários diretórios. Em
+              vez de modificar o sistema de arquivos original ou mesclar
+              diretórios, o UnionFS permite a montagem simultânea de vários
+              diretórios em um único ponto de montagem, mantendo seu conteúdo
+              separado. Esse recurso é especialmente benéfico no contexto do
+              Docker, pois nos permite gerenciar e otimizar o desempenho do
+              armazenamento, minimizando a duplicação e reduzindo o tamanho da
+              imagem do container.
+            </Content>
+            <Content>
+              Estas são algumas das características essenciais dos sistemas de
+              arquivos union:
+            </Content>
+            <List>
+              <li>
+                <b>Estrutura em camadas:</b> O UnionFS constrói uma estrutura em
+                camadas que consiste em várias camadas somente leitura e uma
+                camada superior gravável. Esta estrutura permite um tratamento
+                eficiente das alterações, atualizando apenas a camada gravável,
+                enquanto as camadas só de leitura preservam os dados originais.
+              </li>
+              <li>
+                <b>Cópia na Escrita:</b> O mecanismo copy-on-write (COW) é uma
+                caraterística indispensável do UnionFS. Se um container fizer
+                alterações a um arquivo existente, o sistema cria uma cópia do
+                arquivo na camada gravável, deixando o arquivo original na
+                camada apenas de leitura intocado. Este processo restringe a
+                modificação à camada superior, garantindo uma operação rápida e
+                eficiente em termos de recursos.
+              </li>
+              <li>
+                <b>Partilha de recursos:</b> Os sistemas de arquivos Union
+                permitem que vários containers partilhem camadas de base comuns
+                enquanto são executados separadamente. Este recurso evita a
+                duplicação de recursos e economiza espaço de armazenamento
+                significativo.
+              </li>
+              <li>
+                <b>Inicialização rápida de containers:</b> Os sistemas de
+                arquivos Union possibilitam a criação de novos containers
+                instantaneamente, simplesmente criando uma nova camada gravável
+                em camadas somente leitura existentes. Essa inicialização rápida
+                reduz a sobrecarga de operações de arquivo duplicadas,
+                melhorando o desempenho.
+              </li>
+            </List>
+            <SubtitleLevel3>
+              Sistemas de arquivos Union populares no Docker
+            </SubtitleLevel3>
+            <Content>
+              O Docker suporta vários sistemas de arquivos de união que
+              facilitam a criação e gestão de containers. Algumas das opções
+              populares incluem:
+            </Content>
+            <List>
+              <li>
+                <Anchor
+                  href='https://aufs.sourceforge.net/'
+                  fontweight='bold'
+                  color='black'
+                >
+                  AUFS (<i>Advanced Multi-Layered Unification Filesystem</i> |
+                  Sistema de ficheiros avançado de unificação multicamadas):
+                </Anchor>{' '}
+                O AUFS é amplamente utilizado como um driver de armazenamento do
+                Docker, permitindo o gerenciamento eficiente de várias camadas.
+              </li>
+              <li>
+                <Anchor
+                  href='https://www.kernel.org/doc/html/latest/filesystems/overlayfs.html'
+                  fontweight='bold'
+                  color='black'
+                >
+                  OverlayFS (<i>Overlay Filesystem</i> | Sistema de arquivos de
+                  sobreposição):
+                </Anchor>{' '}
+                O OverlayFS é outro sistema de arquivos union suportado pelo
+                Docker. Ele usa uma abordagem simplificada em comparação com o
+                AUFS para criar e gerenciar diretórios sobrepostos.
+              </li>
+              <li>
+                <Anchor
+                  href='https://archive.kernel.org/oldwiki/btrfs.wiki.kernel.org/index.php/Main_Page.html'
+                  fontweight='bold'
+                  color='black'
+                >
+                  Btrfs (<i>B-Tree Filesystem</i> | Sistema de arquivos B-Tree):
+                </Anchor>{' '}
+                O Btrfs, um sistema de arquivos moderno, oferece compatibilidade
+                com os sistemas de arquivos union, para além de funcionalidades
+                de armazenamento avançadas, como instantâneos e soma de
+                verificação.
+              </li>
+              <li>
+                <Anchor
+                  href='https://zfsonlinux.org/'
+                  fontweight='bold'
+                  color='black'
+                >
+                  ZFS (<i>Z File System</i> | Sistema de arquivos Z):
+                </Anchor>{' '}
+                O ZFS é uma plataforma de armazenamento robusta e de elevada
+                capacidade que fornece funcionalidades de sistema de arquivos
+                union juntamente com proteção de dados, compressão e
+                desduplicação.
+              </li>
+            </List>
           </ContentContainer>
         </Container>
       </main>
