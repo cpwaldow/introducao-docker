@@ -8,6 +8,7 @@ import {
   ContentContainer,
   Content,
   SubtitleLevel3,
+  List,
 } from '../style/style';
 
 const Technologies = () => {
@@ -71,7 +72,7 @@ const Technologies = () => {
         </Container>
         <Container>
           <ContentContainer>
-            <SubtitleLevel3>Espaços para nome | Namespace</SubtitleLevel3>
+            <SubtitleLevel3>Namespace</SubtitleLevel3>
             <Content>
               Namespaces são outra característica do kernel do Linux que fornece
               processos de isolamento. Eles permitem o Docker a criar espaços de
@@ -80,6 +81,79 @@ const Technologies = () => {
               em outros containers ou no sistema hospedeiro. Existem diversos
               tipos de namespaces, como, PID, NET, MNT e USER, cada um
               responsável por isolar um aspecto diferente do sistema.
+            </Content>
+            <Content>
+              Os namespaces são uma das principais tecnologias que o Docker
+              utiliza para fornecer isolamento entre containers. Nesta seção,
+              discutiremos brevemente o que são os namespaces e como funcionam.
+            </Content>
+            <SubtitleLevel3>O que são namespaces?</SubtitleLevel3>
+            <Content>
+              No kernel do Linux, os namespaces são um recurso que permite o
+              isolamento de vários recursos do sistema, possibilitando que um
+              processo e seus filhos tenham uma visão de um subconjunto do
+              sistema que é separado de outros processos. Os namespaces ajudam a
+              criar uma camada de abstração para manter os processos em
+              containers separados uns dos outros e do sistema host.
+            </Content>
+            <Content>
+              Existem vários tipos de namespaces no Linux, incluindo:
+            </Content>
+            <List>
+              <li>
+                <b>PID (Process IDs)</b>: Isola o espaço numérico do ID do
+                processo, o que significa que os processos dentro de um
+                container só veem seus próprios processos, e não os do host ou
+                de outros containers.
+              </li>
+              <li>
+                <b>Rede (NET)</b>: Fornece a cada container uma visão separada
+                da pilha de rede, incluindo suas próprias interfaces de rede,
+                tabelas de roteamento e regras de firewall.
+              </li>
+              <li>
+                <b>Montagem (MNT)</b>: Isola os pontos de montagem do sistema de
+                arquivos de forma que cada container tenha seu próprio sistema
+                de arquivos raiz, e os recursos montados apareçam apenas dentro
+                desse container.
+              </li>
+              <li>
+                <b>UTS (UNIX Time Sharing System)</b>: Permite que cada
+                container tenha seu próprio nome de host e nome de domínio,
+                separado de outros containers e do sistema host.
+              </li>
+              <li>
+                <b>Usuário (USER)</b>: Mapeia os identificadores de usuário e
+                grupo entre o container e o host, para que diferentes permissões
+                possam ser definidas para recursos dentro do container.
+              </li>
+              <li>
+                <b>IPC (Comunicação entre processos)</b>: Permite ou restringe a
+                comunicação entre processos em diferentes containers.
+              </li>
+            </List>
+            <SubtitleLevel3>Como o Docker usa Namespaces</SubtitleLevel3>
+            <Content>
+              O Docker utiliza namespaces para criar ambientes isolados para
+              containers. Quando um container é iniciado, o Docker cria um novo
+              conjunto de namespaces para esse container. Estes namespaces só se
+              aplicam dentro do container, pelo que todos os processos
+              executados dentro do container têm acesso a um subconjunto de
+              recursos do sistema que estão isolados de outros containers, bem
+              como do sistema anfitrião.
+            </Content>
+            <Content>
+              Ao aproveitar os namespaces, o Docker garante que os containers
+              são verdadeiramente portáteis e podem ser executados em qualquer
+              sistema sem conflitos ou interferência de outros processos ou
+              containers em execução no mesmo anfitrião.
+            </Content>
+            <Content>
+              Em resumo, os namespaces fornecem um nível de isolamento de
+              recursos que permite a execução de vários containers com recursos
+              de sistema separados no mesmo anfitrião, sem que interfiram uns
+              com os outros. Esta é uma caraterística crítica que forma a
+              espinha dorsal da tecnologia de container do Docker.
             </Content>
           </ContentContainer>
         </Container>
