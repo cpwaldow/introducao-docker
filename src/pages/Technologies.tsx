@@ -72,7 +72,7 @@ const Technologies = () => {
         </Container>
         <Container>
           <ContentContainer>
-            <SubtitleLevel3>Namespace</SubtitleLevel3>
+            <Subtitle>Namespace</Subtitle>
             <Content>
               Namespaces são outra característica do kernel do Linux que fornece
               processos de isolamento. Eles permitem o Docker a criar espaços de
@@ -154,6 +154,68 @@ const Technologies = () => {
               de sistema separados no mesmo anfitrião, sem que interfiram uns
               com os outros. Esta é uma caraterística crítica que forma a
               espinha dorsal da tecnologia de container do Docker.
+            </Content>
+          </ContentContainer>
+        </Container>
+        <Container background='main-blue'>
+          <ContentContainer>
+            <Subtitle color='white'>cgroups</Subtitle>
+            <Content color='white'>
+              <b>cgroups</b> ou <b>grupos de controle</b> é uma funcionalidade
+              do kernel do Linux que lhe permite atribuir e gerir recursos, como
+              CPU, memória, largura de banda de rede e I/O, entre grupos de
+              processos em execução num sistema. Ele desempenha um papel crucial
+              no fornecimento de isolamento de recursos e na limitação dos
+              recursos que um container em execução pode usar.
+            </Content>
+            <Content color='white'>
+              O Docker utiliza cgroups para impor restrições de recursos aos
+              containers, permitindo-lhes ter um comportamento consistente e
+              previsível. Abaixo estão alguns dos principais recursos e
+              benefícios dos cgroups no contexto dos containers do Docker:
+            </Content>
+            <SubtitleLevel3 color='white'>
+              Isolamento de recursos
+            </SubtitleLevel3>
+            <Content color='white'>
+              O cgroups ajuda a confinar cada container a um conjunto específico
+              de recursos, assegurando uma partilha justa dos recursos do
+              sistema entre vários containers. Isto permite um melhor isolamento
+              entre diferentes containers, de modo a que um container com mau
+              comportamento não consuma todos os recursos disponíveis, afetando
+              negativamente os outros containers.
+            </Content>
+            <SubtitleLevel3 color='white'>Recursos Limitados</SubtitleLevel3>
+            <Content color='white'>
+              Com os cgroups, pode definir limites para vários recursos do
+              sistema utilizados por um container, tais como CPU, memória e I/O.
+              Isto ajuda a evitar que um único container consuma recursos
+              excessivos e cause problemas de desempenho a outros containers ou
+              ao sistema anfitrião.
+            </Content>
+            <SubtitleLevel3 color='white'>
+              Containers Prioritários
+            </SubtitleLevel3>
+            <Content color='white'>
+              Ao atribuir diferentes compartilhamentos de recursos, o cgroups
+              permite-lhe dar preferência ou prioridade a determinados
+              containers. Isto pode ser útil em cenários onde alguns containers
+              são mais críticos do que outros, ou durante situações de elevada
+              contenção de recursos.
+            </Content>
+            <SubtitleLevel3 color='white'>Monitoramento</SubtitleLevel3>
+            <Content color='white'>
+              O cgroups também oferece mecanismos para monitorizar a utilização
+              de recursos de containers individuais, o que ajuda a obter
+              informações sobre o desempenho dos containers e a identificar
+              potenciais estrangulamentos de recursos.
+            </Content>
+            <Content color='white'>
+              Em geral, o cgroups é uma tecnologia subjacente essencial no
+              Docker. Ao aproveitar os cgroups, o Docker fornece um ambiente de
+              tempo de execução de containers robusto e eficiente, garantindo
+              que os containers têm os recursos necessários e mantendo um bom
+              desempenho geral do sistema.
             </Content>
           </ContentContainer>
         </Container>
