@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { ContentBoxType, LinkRouteType } from '../types';
+import { AnchorType, ContentBoxType, LinkRouteType } from '../types';
 import { Link } from 'react-router-dom';
 
 export const Container = styled.section<ContentBoxType>`
@@ -77,4 +77,9 @@ export const Title = styled.h1`
 export const WorkingImg = styled.img`
   width: 50vw;
   border-radius: 10px;
+`;
+
+export const Anchor = styled.a<AnchorType>`
+  color: ${(props) => props.color};
+  font-weight: ${(props) => props.fontweight};
 `;

@@ -12,3 +12,8 @@ export type LinkRouteType = {
   next?: string;
   prev?: string;
 };
+
+export type AnchorType = {
+  color?: string;
+  fontweight?: string;
+};
