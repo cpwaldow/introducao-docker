@@ -100,3 +100,25 @@ export const Small = styled.small`
   text-align: center;
   display: block;
 `;
+
+export const NavbarContainer = styled.div`
+  display: flex;
+  > nav {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+    background-color: var(--main-dark-blue);
+    color: white;
+    width: 20%;
+    text-align: center;
+    > a {
+      color: white;
+      text-decoration: none;
+      &:hover {
+        color: #0aa5f8;
+        transition: all 0.3s;
+      }
+    }
+  }
+`
