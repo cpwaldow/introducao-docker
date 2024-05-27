@@ -9,12 +9,10 @@ import {
   Title,
   FlexContainer,
 } from '../style/style';
-import Header from '../components/Header';
 
 const Introduction = () => {
   return (
     <>
-      <Header />
       <main>
         <Title>Docker e Containers</Title>
         <Container background='main-blue'>

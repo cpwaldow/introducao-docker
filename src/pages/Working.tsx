@@ -1,4 +1,3 @@
-import Header from '../components/Header';
 import {
   WorkingImg,
   FlexContainer,
@@ -12,7 +11,6 @@ const Working = () => {
   const img = `${window.location.origin}/docker.svg`;
   return (
     <>
-      <Header />
       <FlexContainer>
         <div>
           <Title>Pode não parecer, mas estamos trabalhando </Title>

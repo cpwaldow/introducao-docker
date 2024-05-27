@@ -1,4 +1,3 @@
-import Header from '../components/Header';
 import {
   Title,
   LinkRoute,
@@ -16,7 +15,6 @@ import {
 const Technologies = () => {
   return (
     <>
-      <Header />
       <main>
         <Title>Tecnologias</Title>
         <Container>
